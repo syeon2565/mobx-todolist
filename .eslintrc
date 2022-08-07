@@ -3,13 +3,11 @@
     "browser": true,
     "es6": true
   },
-  "parser": "@typescript-eslint/parser",
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
     "airbnb",
     "plugin:prettier/recommended",
-    "plugin:@typescript-eslint/recommended",
     "prettier"
   ],
   "settings": {
@@ -43,7 +41,6 @@
     "react/require-default-props": 0,
     "no-shadow": 0,
     "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
-    "react/function-component-definition": 0,
-    "@typescript-eslint/no-non-null-assertion": 0
+    "react/function-component-definition": 0
   }
 }
