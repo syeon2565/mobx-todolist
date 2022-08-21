@@ -10,9 +10,9 @@ class ToDoStore {
     makeAutoObservable(this);
   }
 
-  // create = (todo) => {
-  //   this.todos.push({ ...todo, id: (this.id += 1) });
-  // };
+  create = (todo) => {
+    this.todos.push({ ...todo, id: (this.id += 1), checked: false });
+  };
 
   // toggle = (id) => {
   //   this.todos = this.todos.map((todo) => {
@@ -25,9 +25,9 @@ class ToDoStore {
   //   });
   // };
 
-  // remove = (id) => {
-  //   this.todos = this.todos.filter((todo) => todo.id !== id);
-  // };
+  remove = (id) => {
+    this.todos = this.todos.filter((todo) => todo.id !== id);
+  };
 }
 
 export default ToDoStore;
