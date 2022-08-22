@@ -1,4 +1,3 @@
-import React from "react";
 import { observer } from "mobx-react";
 
 const Todo = observer(({ todos }) => (
@@ -12,6 +11,7 @@ const Todo = observer(({ todos }) => (
     </form>
     {todos.todos.map((todo) => (
       <div key={todo.id}>
+        <input type="checkbox" checked={todo.checked} />
         {todo.todo}
         <button onClick={todos.remove}>삭제하기</button>
       </div>
