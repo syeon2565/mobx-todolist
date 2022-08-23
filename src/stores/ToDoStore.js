@@ -14,17 +14,12 @@ class ToDoStore {
     this.todos.push({ todo: todo, id: this.nextId++, checked: false });
   };
 
-  // toggle = (id) => {
-  //   this.todos = this.todos.map((todo) => {
-  //     if (todo.id === id) {
-  //       return {
-  //         ...todo,
-  //         checked: !todo.checked,
-  //       };
-  //     }
-  //     console.log(todo.checked);
-  //   });
-  // };
+  toggle = (id) => {
+    const todos = this.todos.map((todo) => {
+      if (id === todo.id) todo.checked = !todo.checked;
+    });
+    return todos;
+  };
 
   remove = (id) => {
     this.todos = this.todos.filter((todo) => todo.id !== id);
