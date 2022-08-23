@@ -11,7 +11,7 @@ class ToDoStore {
   }
 
   create = (todo) => {
-    this.todos.push({ todo: todo, id: (this.nextId += 1), checked: false });
+    this.todos.push({ todo: todo, id: this.nextId++, checked: false });
     console.log(todo);
   };
 
@@ -23,6 +23,7 @@ class ToDoStore {
   //         checked: !todo.checked,
   //       };
   //     }
+  //     console.log(todo.checked);
   //   });
   // };
 
