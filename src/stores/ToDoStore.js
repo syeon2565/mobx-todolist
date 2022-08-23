@@ -12,7 +12,6 @@ class ToDoStore {
 
   create = (todo) => {
     this.todos.push({ todo: todo, id: this.nextId++, checked: false });
-    console.log(todo);
   };
 
   // toggle = (id) => {
