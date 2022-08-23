@@ -5,13 +5,14 @@ class ToDoStore {
     { id: 1, todo: "리액트", checked: false },
     { id: 2, todo: "mobx", checked: true },
   ];
-
+  nextId = 3;
   constructor() {
     makeAutoObservable(this);
   }
 
   create = (todo) => {
-    this.todos.push({ ...todo, id: (this.id += 1), checked: false });
+    this.todos.push({ todo: todo, id: (this.nextId += 1), checked: false });
+    console.log(todo);
   };
 
   // toggle = (id) => {
