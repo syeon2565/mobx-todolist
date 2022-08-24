@@ -15,10 +15,9 @@ class ToDoStore {
   };
 
   toggle = (id) => {
-    const todos = this.todos.map((todo) => {
+    this.todos.map((todo) => {
       if (id === todo.id) todo.checked = !todo.checked;
     });
-    return todos;
   };
 
   remove = (id) => {
